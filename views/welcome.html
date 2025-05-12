@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <h2 id="welcome-msg">Welcome!</h2>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const user = params.get("user");
+        if (user) {
+            document.getElementById("welcome-msg").textContent = `Welcome, ${user}!`;
+        }
+    </script>
+</body>
+</html>
